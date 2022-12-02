@@ -30,6 +30,16 @@ public class RegexExapmle {
 		else
 			System.out.println("Invalid last name!");
 		
+		System.out.println("Enter email");
+		String email = sc.next();
+		Pattern ptmail = Pattern.compile("^[a-z]{3,}([.][a-z]{3,})?[@][a-z]{2,}[.]co([.]in)?$"); 
+		Matcher mail = ptmail.matcher(email);
+		
+		if(mail.matches())
+			System.out.println("Valid email!");
+		else
+			System.out.println("Invalid email!");
+		
 	}
 
 }
