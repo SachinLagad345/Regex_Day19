@@ -50,6 +50,16 @@ public class RegexExapmle {
 		else
 			System.out.println("Invalid mobile!");
 		
+		System.out.println("Enter password with min 8 chars");
+		String passwd = sc.nextLine();
+		Pattern ptpswd = Pattern.compile("^[a-z A-Z 0-9]{8,}$"); 
+		Matcher mpswd = ptpswd.matcher(passwd);
+		
+		if(mpswd.matches())
+			System.out.println("Valid password!");
+		else
+			System.out.println("Invalid password!");
+		
 	}
 
 }
