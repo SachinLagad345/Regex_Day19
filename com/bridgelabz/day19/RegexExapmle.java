@@ -12,9 +12,9 @@ public class RegexExapmle {
 		Matcher m = pat.matcher("Sac");
 		
 		if(m.matches())
-			System.out.println("Valid first name");
+			System.out.println("Valid first name!");
 		else
-			System.out.println("Invalid first name");
+			System.out.println("Invalid first name!");
 	}
 
 }
