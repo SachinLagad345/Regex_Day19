@@ -1,3 +1,8 @@
+/*
+ * Add password with at least one digit
+ * 
+ */
+
 package com.bridgelabz.day19;
 
 import java.util.Scanner;
@@ -50,9 +55,19 @@ public class UserRegistrationRegex {
 //		else
 //			System.out.println("Invalid mobile!");
 		
-		System.out.println("Enter password with min 8 chars at least one uppercase");
+//		System.out.println("Enter password with min 8 chars at least one uppercase");
+//		String passwd = sc.nextLine();
+//		Pattern ptpswd = Pattern.compile("(?=[A-Z])[a-z A-Z 0-9]{8,}"); 
+//		Matcher mpswd = ptpswd.matcher(passwd);
+//		
+//		if(mpswd.matches())
+//			System.out.println("Valid password!");
+//		else
+//			System.out.println("Invalid password!");
+		
+		System.out.println("Enter password with min 8 chars at least one digit");
 		String passwd = sc.nextLine();
-		Pattern ptpswd = Pattern.compile("(?=[A-Z])[a-z A-Z 0-9]{8,}"); 
+		Pattern ptpswd = Pattern.compile("(?=.*[0-9])^[a-z A-Z 0-9]{8,}"); 
 		Matcher mpswd = ptpswd.matcher(passwd);
 		
 		if(mpswd.matches())
